@@ -7,7 +7,6 @@ from python_docx_replace.docx_replace import docx_replace
 
 doc = aw.Document()
 
-
 class WordDoc:
     def __init__(self, path):
         self.path = path
@@ -20,10 +19,7 @@ class WordDoc:
         for replacement_target in replacement_mapping.keys():
             print(replacement_target)
             print(replacement_mapping[replacement_target])
-            # docx_replace(
-            #     self.document,
-            #     replacement_target=replacement_mapping[replacement_target],
-            # )
+
             for p in self.document.paragraphs:
                 for run in p.runs:
                     if replacement_target in run.text:
