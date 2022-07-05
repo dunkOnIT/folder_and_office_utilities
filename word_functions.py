@@ -1,4 +1,4 @@
-import aspose-words as word
+import aspose.words as word
 
 
 class WordDoc:
